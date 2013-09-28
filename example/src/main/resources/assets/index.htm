@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dropwizard & Jedis Example</title>
+</head>
+<body>
+
+
+
+<h1>Welcome</h1>
+
+This is a demo application for <a href="http://github.com/anastasop/dropwizard-jedis">dropwizard-jedis</a>,
+a bundle which integrates <a href="http://dropwizard.codahale.com/">dropwizard</a> and 
+<a href="https://github.com/xetorthio/jedis">jedis</a> a popular <a href="http://redis.io">redis</a> client.
+<p>
+The concept is simple. A set of teams and their members are stored in redis. These are all manipulated using the
+following restful urls. Of course redis must be up and running before using them. You can check this using the
+dropwizard <a href="http://localhost:8081">admin console</a>
+<pre>
+GET   /teams/
+GET   /teams/{name}
+POST  /teams/{name}
+</pre>
+These urls work with both html and json. For example to add a team and its initial members use
+<pre>
+curl -H"Content-Type: text/plain" -d"Balotelli,Kaka" http://localhost:8080/teams/Milan
+</pre>
+You can access the database using the following link.
+<a href="/teams">Teams</a>
+<p>
+Enjoy!!
+
+
+
+</body>
+</html>

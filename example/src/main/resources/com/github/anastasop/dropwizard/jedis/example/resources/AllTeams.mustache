@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dropwizard & Jedis Example: All teams</title>
+</head>
+
+<body>
+<h1>The teams stored in redis are:</h1>
+{{#teams}}
+  <a href="/teams/{{.}}">{{.}}</a><br>
+{{/teams}}
+</body>
+
+</html>
